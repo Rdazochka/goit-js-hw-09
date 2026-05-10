@@ -26,8 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = loadFromLS(feedBackForm);
     if(!data) return;
 
-    formEl.elements.email.value = data.email;
-    formEl.elements.message.value = data.message;
+    formData.email = data.email;
+    formData.message = data.message;
+
+    formEl.elements.email.value = formData.email;
+    formEl.elements.message.value = formData.message;
         
 })
     
@@ -52,6 +55,9 @@ formEl.addEventListener('submit', (e) => {
 
     localStorage.removeItem(feedBackForm)
     formEl.reset();
+
+    formData.email = "";
+    formData.message = "";
 }) 
 
 //  function saveToLS(key, value) {
