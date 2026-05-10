@@ -1,17 +1,3 @@
-const markup = `<form class="feedback-form" autocomplete="off">
-  <label>
-    Email
-    <input type="email" name="email" autofocus />
-  </label>
-  <label>
-    Message
-    <textarea name="message" rows="1"></textarea>
-  </label>
-  <button type="submit">Submit</button>
-</form>`;
-
-const markupEl = document.querySelector('.form-container');
-markupEl.insertAdjacentHTML('afterbegin', markup);
 
 const feedBackForm = 'feedback-form-state'
 
